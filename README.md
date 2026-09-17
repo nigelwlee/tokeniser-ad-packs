@@ -25,3 +25,6 @@ Static site, no build step. Deployed on Vercel from `main`.
 - **Changing text baked into an existing tile image** (on-tile headline, support line, kicker): set `on_tile` / `support` to the new wording **and** add `tile_fix: { field, from, to }` to that card in `PACKS`. The page shows an amber "IMAGE UPDATE NEEDED" badge on the tile and an "IMAGE FIX" row with old → new wording, so the designer can re-export the PNG. Remove `tile_fix` once the new image is in `tiles/` and `preview/` is regenerated.
 - **New concept with no image yet**: add the card with `placeholder: true`; the page renders a slate frame with the intended on-tile lines and an "IMAGE TO COME" tag.
 - **Headline / intro / CTA edits**: change `scripts/copy_data.py`, run `fill_copy.py` then `check_copy.py`, push.
+
+## Ad layout guide
+Lives on the site (collapsible section under the copy spec). Four elements, one left-aligned column, 8% safe margin: (1) short mint accent bar, (2) headline in sentence case with the closing phrase in mint, ≤8 words, (3) support line ≤6 words, (4) footer row with the sign-off left and the tokeniser wordmark right on one baseline. Nothing else on the tile. Pack A already follows it; every Pack B tile carries a `tile_fix` with a punchy support line and `layout: true`.

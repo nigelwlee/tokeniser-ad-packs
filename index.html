@@ -68,6 +68,32 @@
   .copy .fix-box .from{display:block;color:#8f8a7c;text-decoration:line-through;font-size:13px}
   .copy .fix-box .to{display:block;font-weight:600;font-size:14px;margin-top:2px}
   .copy .fix-box .to::before{content:"→ ";color:#7a5a00}
+  .guide{max-width:1180px;margin:32px auto 0}
+  .guide-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--rule);padding-bottom:8px}
+  .guide-head .section-label{border:0;padding:0}
+  .guide-toggle{font-family:'IBM Plex Mono',monospace;font-size:11px;background:none;border:0;cursor:pointer;color:var(--ink);border-bottom:1px solid var(--ink);padding:0 0 1px}
+  .guide-body{display:grid;grid-template-columns:minmax(280px,420px) 1fr;gap:40px;margin-top:24px;align-items:start}
+  .guide-body[hidden]{display:none}
+  .guide-tile{position:relative;aspect-ratio:1/1;background:linear-gradient(160deg,#3a3f4a,#1b1f26);color:#fff;border-radius:3px;box-shadow:0 18px 40px rgba(0,0,0,.22);padding:8%;display:flex;flex-direction:column;justify-content:flex-end;container-type:inline-size;overflow:hidden}
+  .gt-safe{position:absolute;inset:8%;border:1px dashed rgba(162,255,200,.45);pointer-events:none}
+  .gt-bar{width:11%;height:9px;background:var(--mint);margin-bottom:5%}
+  .gt-h{font-weight:600;font-size:9cqw;line-height:1.12;letter-spacing:-0.01em;max-width:92%}
+  .gt-h em{font-style:normal;color:var(--mint)}
+  .gt-sub{font-size:3.4cqw;margin-top:4%;opacity:.95}
+  .gt-foot{display:flex;justify-content:space-between;align-items:baseline;margin-top:9%;font-size:2.9cqw}
+  .gt-foot .gt-sign{color:var(--mint);font-weight:600}
+  .gt-foot .wm{font-weight:600;font-size:3.6cqw;color:var(--mint)}
+  .gt-foot .wm i{font-style:normal;display:inline-block;width:.85em;height:.85em;border:2px solid var(--mint);border-radius:50%;vertical-align:-0.05em;margin:0 1px}
+  .gt-n{position:absolute;right:3.5%;width:22px;height:22px;border-radius:50%;background:#ffd166;color:#0a0a0a;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;display:flex;align-items:center;justify-content:center}
+  .gt-n.n1{top:36%}.gt-n.n2{top:52%}.gt-n.n3{top:71%}.gt-n.n4{top:84%}
+  .guide-rules{font-size:14px;line-height:1.6;color:var(--ink)}
+  .guide-rules .guide-intro{font-weight:500;margin-bottom:14px}
+  .guide-rules ol{padding-left:22px;margin-bottom:14px}
+  .guide-rules li{margin-bottom:8px}
+  .guide-rules li::marker{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#7a5a00;font-weight:500}
+  .guide-rules p{margin-bottom:10px}
+  @media (max-width:800px){.guide-body{grid-template-columns:1fr}}
+  .copy .fix-box .lay{display:block;margin-top:8px;font-size:12px;color:#7a5a00;font-weight:500}
   .spec{max-width:1180px;margin:18px auto 0;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.7;color:var(--muted)}
   .spec b{color:var(--ink);font-weight:500}
 
@@ -90,6 +116,29 @@
 
   <div class="tabs" role="tablist" id="tabs"></div>
   <div class="spec"><b>COPY SPEC</b> · LinkedIn single-image Sponsored Content · Intro text ≤150 chars (shown above the image) · Headline ≤70 chars (below the image) · CTA button <b>Request demo</b> → Zoho booking page · Theme line ≤60 chars per sub-theme · Proof points and voice rules in COPY-BRIEF.md</div>
+  <section class="guide" id="guide">
+    <div class="guide-head"><span class="section-label" style="margin:0">AD LAYOUT GUIDE</span><button class="guide-toggle" id="guideToggle" type="button">hide</button></div>
+    <div class="guide-body" id="guideBody">
+      <div class="guide-tile">
+        <div class="gt-bar"></div><span class="gt-n n1">1</span>
+        <div class="gt-h">Headline in sentence case, <em>payoff in mint.</em></div><span class="gt-n n2">2</span>
+        <div class="gt-sub">Support line, six words max.</div><span class="gt-n n3">3</span>
+        <div class="gt-foot"><span class="gt-sign">Your fund with super powers</span><span class="wm">t<i>o</i>keniser</span></div><span class="gt-n n4">4</span>
+        <div class="gt-safe"></div>
+      </div>
+      <div class="guide-rules">
+        <p class="guide-intro">Four elements, one column, left-aligned, all inside an 8% safe margin. Anything beyond these four is a cut. Pack A tiles already follow this; Pack B tiles need re-laying out to match.</p>
+        <ol>
+          <li><b>Accent bar.</b> Short mint rule, top-left of the text column. It anchors the eye and is the only decoration.</li>
+          <li><b>Headline.</b> Montserrat SemiBold, sentence case, 2–3 lines, eight words or fewer. The closing word or phrase is set in mint: that is the payoff, so the headline must be written to land on it. One idea only.</li>
+          <li><b>Support line.</b> One line, six words max, regular weight, white. A fragment is fine. It sharpens the headline; it never explains it. Drop it entirely if the headline already carries the idea.</li>
+          <li><b>Footer row.</b> Sign-off on the left (<i>Your fund with super powers</i> for Pack B, <i>Finance is next. Tokenisation is how.</i> for Pack A) and the tokeniser wordmark on the right, on the same baseline, small. The wordmark never sits on its own line.</li>
+        </ol>
+        <p><b>Type scale.</b> Headline ~9% of tile width, support ~3%, footer ~2.8%. Photography under the slate wash so white type holds contrast everywhere in the text column.</p>
+        <p><b>Not allowed.</b> A sign-off in mint stacked above a wordmark on its own line. Support lines that run to two lines. Two bold weights. Kicker lines (dates, labels) unless they replace the support line. More than one mint phrase.</p>
+      </div>
+    </div>
+  </section>
   <div id="packs"></div>
 
 <script>
@@ -141,28 +190,28 @@ const PACKS = [
     dir: "b",
     sections: [
       { label: "Instant settlement", theme_line: "Settle the moment the trade is struck.", cards: [
-        { file: "capability_tile_01.png", on_tile: "Settlement that’s already done.", support: "T+2 becomes T+0. Capital stops waiting and starts working.", headline: "T+0 settlement for your fund, on infrastructure 160+ already use.", primary_text: "Two days of settlement risk, gone. Tokenised units settle atomically, the moment a trade is struck. See T+0 on your asset class. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
-        { file: "capability_tile_02.png", on_tile: "Two days of float, released.", support: "Settle the instant a trade is struck, not two days later.", headline: "Free two days of capital on every trade. Investors notice.", primary_text: "Every T+2 trade parks investor capital for two days. On Tokeniser it works from minute one. A$2B+ transacted this way. Request a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_01.png", on_tile: "Settlement that’s already done.", support: "T+2 becomes T+0.", headline: "T+0 settlement for your fund, on infrastructure 160+ already use.", primary_text: "Two days of settlement risk, gone. Tokenised units settle atomically, the moment a trade is struck. See T+0 on your asset class. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "T+2 becomes T+0. Capital stops waiting and starts working.", to: "T+2 becomes T+0.", layout: true } },
+        { file: "capability_tile_02.png", on_tile: "Two days of float, released.", support: "Settle the instant you trade.", headline: "Free two days of capital on every trade. Investors notice.", primary_text: "Every T+2 trade parks investor capital for two days. On Tokeniser it works from minute one. A$2B+ transacted this way. Request a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "Settle the instant a trade is struck, not two days later.", to: "Settle the instant you trade.", layout: true } },
       ]},
       { label: "Collateral mobility", theme_line: "Holdings that work as collateral, in minutes.", cards: [
-        { file: "capability_tile_03.png", on_tile: "Your holdings, no longer stuck.", support: "Tokenised units can move and be posted as collateral in minutes.", headline: "Let investors borrow against their fund units without redeeming.", primary_text: "Collateralised lending, built into the platform. Investors unlock liquidity while staying invested. New revenue for the fund. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
-        { file: "capability_tile_04.png", on_tile: "Collateral that moves at the speed you do.", support: "Mobilise fund holdings without the settlement lag.", headline: "Post fund holdings as collateral in minutes, not settlement cycles.", primary_text: "Tokenised units move and settle instantly, so collateral moves too. Give investors and counterparties the speed they expect. See it in a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_03.png", on_tile: "Your holdings, no longer stuck.", support: "Units as collateral, in minutes.", headline: "Let investors borrow against their fund units without redeeming.", primary_text: "Collateralised lending, built into the platform. Investors unlock liquidity while staying invested. New revenue for the fund. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "Tokenised units can move and be posted as collateral in minutes.", to: "Units as collateral, in minutes.", layout: true } },
+        { file: "capability_tile_04.png", on_tile: "Collateral that moves at the speed you do.", support: "No settlement lag.", headline: "Post fund holdings as collateral in minutes, not settlement cycles.", primary_text: "Tokenised units move and settle instantly, so collateral moves too. Give investors and counterparties the speed they expect. See it in a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "Mobilise fund holdings without the settlement lag.", to: "No settlement lag.", layout: true } },
       ]},
       { label: "Secondary transfer", theme_line: "Liquidity without waiting for the redemption window.", cards: [
-        { file: "capability_tile_05.png", on_tile: "Change hands, any day.", support: "Positions can transfer without waiting for a redemption window.", headline: "24/7 secondary liquidity for a private fund. Compliant, on-platform.", primary_text: "Positions transfer between eligible holders any day, not just at the window. Compliance rules run on every trade. Book a demo to see it.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
-        { file: "capability_tile_06.png", on_tile: "A way out that doesn’t wait for quarter-end.", support: "Positions transfer between eligible holders, on-platform.", headline: "Give investors an exit without touching the fund’s capital.", primary_text: "Redemptions drain the fund. Secondary transfers don’t. Let eligible investors trade positions between themselves, with a full audit trail.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_05.png", on_tile: "Change hands, any day.", support: "No redemption window needed.", headline: "24/7 secondary liquidity for a private fund. Compliant, on-platform.", primary_text: "Positions transfer between eligible holders any day, not just at the window. Compliance rules run on every trade. Book a demo to see it.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "Positions can transfer without waiting for a redemption window.", to: "No redemption window needed.", layout: true } },
+        { file: "capability_tile_06.png", on_tile: "A way out that doesn’t wait for quarter-end.", support: "Transfers between eligible holders.", headline: "Give investors an exit without touching the fund’s capital.", primary_text: "Redemptions drain the fund. Secondary transfers don’t. Let eligible investors trade positions between themselves, with a full audit trail.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "Positions transfer between eligible holders, on-platform.", to: "Transfers between eligible holders.", layout: true } },
       ]},
       { label: "Real-time transparency", theme_line: "The register is the source of truth, live.", cards: [
-        { file: "capability_tile_07.png", on_tile: "Every position, visible in real time.", support: "One investor portal, live holdings, no quarter-end guesswork.", headline: "One investor portal: live holdings, statements and tax reports.", primary_text: "Your investors see holdings, statements and tax reports the moment they change, in your branded portal. Fewer calls, more trust. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
-        { file: "capability_tile_08.png", on_tile: "The register that updates itself.", support: "Investors see their position the moment it changes.", headline: "Retire the spreadsheet. The register updates itself, every trade.", primary_text: "Registry, cap table, distributions and corporate actions on one platform, updated as trades settle. 23% lower operating costs. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_07.png", on_tile: "Every position, visible in real time.", support: "One portal. Live holdings.", headline: "One investor portal: live holdings, statements and tax reports.", primary_text: "Your investors see holdings, statements and tax reports the moment they change, in your branded portal. Fewer calls, more trust. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "One investor portal, live holdings, no quarter-end guesswork.", to: "One portal. Live holdings.", layout: true } },
+        { file: "capability_tile_08.png", on_tile: "The register that updates itself.", support: "Investors see changes instantly.", headline: "Retire the spreadsheet. The register updates itself, every trade.", primary_text: "Registry, cap table, distributions and corporate actions on one platform, updated as trades settle. 23% lower operating costs. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "Investors see their position the moment it changes.", to: "Investors see changes instantly.", layout: true } },
       ]},
       { label: "Automated compliance", theme_line: "Compliance you don’t have to remember.", cards: [
-        { file: "capability_tile_09.png", on_tile: "Compliance that runs in the code.", support: "Whitelisting and transfer rules enforced automatically, every trade.", headline: "Eligibility and transfer rules enforced on every trade, automatically.", primary_text: "Whitelisting, holder limits and transfer restrictions live in the token. Every trade checks itself. Built for AFSL and MAS frameworks. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
-        { file: "capability_tile_10.png", on_tile: "Rules that can’t be skipped.", support: "Eligibility and restrictions built into the token itself.", headline: "Locally compliant, programmed into the asset. Not bolted on.", primary_text: "Built for Australia’s digital asset laws, with compliance programmed into the protocol. Your licence, your rules, enforced every time. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_09.png", on_tile: "Compliance that runs in the code.", support: "Rules enforced on every trade.", headline: "Eligibility and transfer rules enforced on every trade, automatically.", primary_text: "Whitelisting, holder limits and transfer restrictions live in the token. Every trade checks itself. Built for AFSL and MAS frameworks. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "Whitelisting and transfer rules enforced automatically, every trade.", to: "Rules enforced on every trade.", layout: true } },
+        { file: "capability_tile_10.png", on_tile: "Rules that can’t be skipped.", support: "Eligibility built into the token.", headline: "Locally compliant, programmed into the asset. Not bolted on.", primary_text: "Built for Australia’s digital asset laws, with compliance programmed into the protocol. Your licence, your rules, enforced every time. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "Eligibility and restrictions built into the token itself.", to: "Eligibility built into the token.", layout: true } },
       ]},
       { label: "Always-on", theme_line: "No market hours. No cut-offs. No waiting.", cards: [
-        { file: "capability_tile_11.png", on_tile: "Your fund, open 24/7.", support: "No market hours, no cut-off times. The infrastructure never closes.", headline: "Investors view, transfer and settle any hour, from any device.", primary_text: "No cut-off times, no waiting for Monday. Your fund runs on infrastructure that never closes, with compliance on every trade. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
-        { file: "capability_tile_12.png", on_tile: "Always on. Always settling.", support: "Round-the-clock infrastructure, not banker’s hours.", headline: "Give your Australian fund a global edge: open when your investors are.", primary_text: "Investors in other time zones shouldn’t wait for Sydney to open. 24/7 settlement and liquidity, locally compliant. See it in a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_11.png", on_tile: "Your fund, open 24/7.", support: "No market hours. No cut-offs.", headline: "Investors view, transfer and settle any hour, from any device.", primary_text: "No cut-off times, no waiting for Monday. Your fund runs on infrastructure that never closes, with compliance on every trade. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "No market hours, no cut-off times. The infrastructure never closes.", to: "No market hours. No cut-offs.", layout: true } },
+        { file: "capability_tile_12.png", on_tile: "Always on. Always settling.", support: "Not banker’s hours.", headline: "Give your Australian fund a global edge: open when your investors are.", primary_text: "Investors in other time zones shouldn’t wait for Sydney to open. 24/7 settlement and liquidity, locally compliant. See it in a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "Round-the-clock infrastructure, not banker’s hours.", to: "Not banker’s hours.", layout: true } },
       ]},
     ],
   },
@@ -195,7 +244,7 @@ function renderPack(p){
         <div class="meta"><span>${esc(c.file)}</span>${c.placeholder ? `<span>placeholder</span>` : `<a href="tiles/${p.dir}/${c.file}" download="${esc(c.file)}">download &darr;</a>`}</div>
         <div class="copy">
           <div class="k">ON TILE</div><div class="v ontile">${esc(c.on_tile)}<small>${esc(c.support)}</small></div>
-          ${c.tile_fix ? `<div class="k fix">IMAGE FIX</div><div class="v fix-box"><b>Change the ${esc(c.tile_fix.field)} on the tile</b><span class="from">${esc(c.tile_fix.from)}</span><span class="to">${esc(c.tile_fix.to)}</span></div>` : ""}
+          ${c.tile_fix ? `<div class="k fix">IMAGE FIX</div><div class="v fix-box"><b>Change the ${esc(c.tile_fix.field)} on the tile</b><span class="from">${esc(c.tile_fix.from)}</span><span class="to">${esc(c.tile_fix.to)}</span>${c.tile_fix.layout ? `<span class="lay">Re-lay out per the ad layout guide: bar, headline with mint payoff, support line, then sign-off and wordmark on one baseline.</span>` : ""}</div>` : ""}
           ${slot("HEADLINE", c.headline)}
           ${slot("INTRO TEXT", c.primary_text)}
           ${ctaSlot(c.cta)}
@@ -219,6 +268,8 @@ function activate(id, push=true){
   document.querySelectorAll(".pack").forEach(s => s.classList.toggle("active", s.id === "pack-"+id));
   if(push) history.replaceState(null, "", "#"+id);
 }
+const gb = document.getElementById("guideBody"), gt = document.getElementById("guideToggle");
+gt.addEventListener("click", () => { gb.hidden = !gb.hidden; gt.textContent = gb.hidden ? "show" : "hide"; });
 tabsEl.addEventListener("click", e => { const t = e.target.closest(".tab"); if(t) activate(t.dataset.id); });
 window.addEventListener("hashchange", () => activate(location.hash.slice(1), false));
 activate(location.hash.slice(1) || "a", false);
