@@ -48,6 +48,12 @@
   .copy .v{font-size:14px;line-height:1.5}
   .copy .v.ontile{font-weight:600}
   .copy .v.ontile small{display:block;font-weight:400;color:var(--muted);margin-top:2px}
+  .copy .v .n,.theme-line .v .n{display:inline-block;margin-left:8px;font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:10px;color:#8f8a7c;vertical-align:middle}
+  .n.over{color:#b3261e;font-weight:500}
+  .copy .btn{display:inline-block;font-size:12px;font-weight:600;padding:5px 12px;border:1.5px solid var(--ink);border-radius:20px;background:var(--mint)}
+  .copy .dest{display:block;font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:10px;color:#8f8a7c;margin-top:6px;word-break:break-all}
+  .spec{max-width:1180px;margin:18px auto 0;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.7;color:var(--muted)}
+  .spec b{color:var(--ink);font-weight:500}
 
   @media (max-width:700px){
     body{padding:32px 16px 72px}
@@ -67,6 +73,7 @@
   </div>
 
   <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="spec"><b>COPY SPEC</b> · LinkedIn single-image Sponsored Content · Intro text ≤150 chars (shown above the image) · Headline ≤70 chars (below the image) · CTA button <b>Request demo</b> → Zoho booking page · Theme line ≤60 chars per sub-theme · Proof points and voice rules in COPY-BRIEF.md</div>
   <div id="packs"></div>
 
 <script>
@@ -84,25 +91,25 @@ const PACKS = [
     signoff: "Finance is next. Tokenisation is how.",
     dir: "a",
     sections: [
-      { label: "The thesis", theme_line: "", cards: [
-        { file: "01_investors_ryoji.png", on_tile: "Your investors won’t wait for you to be ready.", support: "The window is open. Move first.", headline: "", primary_text: "", cta: "" },
+      { label: "The thesis", theme_line: "The risk was never the technology. It was the delay.", cards: [
+        { file: "01_investors_ryoji.png", on_tile: "Your investors won’t wait for you to be ready.", support: "The window is open. Move first.", headline: "Give your investors 24/7 liquidity before someone else does.", primary_text: "Investors now expect 24/7 liquidity and T+0 settlement. 160+ funds and companies already offer it on Tokeniser. See what it takes for yours.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
       ]},
-      { label: "The proof — they waited", theme_line: "", cards: [
-        { file: "02_kodak_moment.png", on_tile: "Every industry has its Kodak moment.", support: "This is finance’s. Tokenisation is here.", headline: "", primary_text: "", cta: "" },
-        { file: "03_kodak_waiting.png", on_tile: "Film didn’t kill Kodak. Waiting did.", support: "1975 · Kodak invented digital / Don’t develop a Kodak moment.", headline: "", primary_text: "", cta: "" },
-        { file: "04_blackberry_waiting.png", on_tile: "Keyboards didn’t kill BlackBerry. Waiting did.", support: "2007 · The iPhone arrived / The industry moved. It stood still.", headline: "", primary_text: "", cta: "" },
-        { file: "05_blackberry_stood.png", on_tile: "BlackBerry saw the iPhone coming and stood still.", support: "Certainty is comfortable. Then it’s fatal.", headline: "", primary_text: "", cta: "" },
+      { label: "The proof — they waited", theme_line: "Every industry has one. Finance’s is now.", cards: [
+        { file: "02_kodak_moment.png", on_tile: "Every industry has its Kodak moment.", support: "This is finance’s. Tokenisation is here.", headline: "160+ funds and companies have already tokenised. Yours can too.", primary_text: "Every fund will tokenise eventually. The ones that move first set the terms for investors. See how Tokeniser gets you there, no tech project.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "03_kodak_waiting.png", on_tile: "Film didn’t kill Kodak. Waiting did.", support: "1975 · Kodak invented digital / Don’t develop a Kodak moment.", headline: "The technology is proven. The only variable left is when you move.", primary_text: "A$2B+ has already transacted on Tokeniser. T+0 settlement, 24/7 liquidity, locally compliant. The question isn’t if. It’s when. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "04_blackberry_waiting.png", on_tile: "Keyboards didn’t kill BlackBerry. Waiting did.", support: "2007 · The iPhone arrived / The industry moved. It stood still.", headline: "Your investors are moving to funds that settle in minutes, not days.", primary_text: "The fund next door already offers T+0 settlement and 24/7 liquidity. Standing still is a decision too. See what tokenising yours involves.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "05_blackberry_stood.png", on_tile: "BlackBerry saw the iPhone coming and stood still.", support: "Certainty is comfortable. Then it’s fatal.", headline: "Tokenise without a tech project. Keep your registry, add the edge.", primary_text: "You don’t need to rebuild anything. Tokeniser runs alongside your existing infrastructure, under your existing licence. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
       ]},
-      { label: "The proof — they moved", theme_line: "", cards: [
-        { file: "11_uber_replaced.png", on_tile: "Uber didn’t disrupt the taxi industry. They replaced it.", support: "Finance is next. Tokenisation is how.", headline: "", primary_text: "", cta: "" },
-        { file: "12_airbnb_replaced.png", on_tile: "Airbnb didn’t disrupt the hotel industry. They replaced it.", support: "Finance is next. Tokenisation is how.", headline: "", primary_text: "", cta: "" },
+      { label: "The proof — they moved", theme_line: "First movers don’t compete. They set the terms.", cards: [
+        { file: "11_uber_replaced.png", on_tile: "Uber didn’t disrupt the taxi industry. They replaced it.", support: "Finance is next. Tokenisation is how.", headline: "Tokenised funds are replacing the T+2 model. 160+ have already moved.", primary_text: "Instant settlement. 24/7 secondary liquidity. Investors who can borrow against holdings. This is the fund yours will be compared to. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "12_airbnb_replaced.png", on_tile: "Airbnb didn’t disrupt the hotel industry. They replaced it.", support: "Finance is next. Tokenisation is how.", headline: "Reach investors beyond your channels, without leaving your stack.", primary_text: "Airbnb won on access. Tokenisation gives your fund the same edge: a global investor base, local compliance, T+0 settlement. See it in a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
       ]},
-      { label: "Variations", theme_line: "", cards: [
-        { file: "06_next_kodak.png", on_tile: "The next Kodak moment is coming for finance.", support: "Be the one that moved.", headline: "", primary_text: "", cta: "" },
-        { file: "07_case_study.png", on_tile: "Innovate or become a case study.", support: "History remembers the ones who waited.", headline: "", primary_text: "", cta: "" },
-        { file: "08_chose_film.png", on_tile: "Kodak had the future in its hands. It chose film.", support: "What will you choose?", headline: "", primary_text: "", cta: "" },
-        { file: "09_first_movers.png", on_tile: "First movers write the rules. Everyone else follows them.", support: "The window is open.", headline: "", primary_text: "", cta: "" },
-        { file: "10_dont_develop.png", on_tile: "Don’t develop your own Kodak moment.", support: "Tokenisation is here. Move first.", headline: "", primary_text: "", cta: "" },
+      { label: "Variations", theme_line: "Be the case study they copy, not the one they cite.", cards: [
+        { file: "06_next_kodak.png", on_tile: "The next Kodak moment is coming for finance.", support: "Be the one that moved.", headline: "160+ funds and companies moved first. Here’s what it took them.", primary_text: "The funds that tokenised early now offer T+0 settlement and 24/7 liquidity as standard. Find out what the move looks like for yours. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "07_case_study.png", on_tile: "Innovate or become a case study.", support: "History remembers the ones who waited.", headline: "Cut operating costs 23% and give investors liquidity. Same platform.", primary_text: "Tokenising on Tokeniser: 23% lower operating costs and 24/7 secondary liquidity. That’s the case study worth being in. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "08_chose_film.png", on_tile: "Kodak had the future in its hands. It chose film.", support: "What will you choose?", headline: "Your fund can tokenise at its own pace, under its own licence.", primary_text: "Onboarding happens in stages, at your pace. No rip-and-replace, no new licence. Choose the future without betting the fund on it. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "09_first_movers.png", on_tile: "First movers write the rules. Everyone else follows them.", support: "The window is open.", headline: "Built in Australia, for Australian funds going global.", primary_text: "A Redbelly Network project, born from University of Sydney and CSIRO research. Compliant here, investable from anywhere. See the platform in a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "10_dont_develop.png", on_tile: "Don’t develop your own Kodak moment.", support: "Tokenisation is here. Move first.", headline: "See what tokenising your fund actually involves.", primary_text: "One platform from issuance to settlement. Your team keeps familiar registry operations. A$2B+ transacted already. Book a demo and see it live.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
       ]},
     ],
   },
@@ -114,29 +121,29 @@ const PACKS = [
     signoff: "Your fund with super powers",
     dir: "b",
     sections: [
-      { label: "Instant settlement", theme_line: "", cards: [
-        { file: "capability_tile_01.png", on_tile: "Settlement that’s already done.", support: "T+2 becomes T+0. Capital stops waiting and starts working.", headline: "", primary_text: "", cta: "" },
-        { file: "capability_tile_02.png", on_tile: "Two days of float, released.", support: "Settle the instant a trade is struck, not two days later.", headline: "", primary_text: "", cta: "" },
+      { label: "Instant settlement", theme_line: "Settle the moment the trade is struck.", cards: [
+        { file: "capability_tile_01.png", on_tile: "Settlement that’s already done.", support: "T+2 becomes T+0. Capital stops waiting and starts working.", headline: "T+0 settlement for your fund, on infrastructure 160+ already use.", primary_text: "Two days of settlement risk, gone. Tokenised units settle atomically, the moment a trade is struck. See T+0 on your asset class. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_02.png", on_tile: "Two days of float, released.", support: "Settle the instant a trade is struck, not two days later.", headline: "Free two days of capital on every trade. Investors notice.", primary_text: "Every T+2 trade parks investor capital for two days. On Tokeniser it works from minute one. A$2B+ transacted this way. Request a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
       ]},
-      { label: "Collateral mobility", theme_line: "", cards: [
-        { file: "capability_tile_03.png", on_tile: "Your holdings, no longer stuck.", support: "Tokenised units can move and be posted as collateral in minutes.", headline: "", primary_text: "", cta: "" },
-        { file: "capability_tile_04.png", on_tile: "Collateral that moves at the speed you do.", support: "Mobilise fund holdings without the settlement lag.", headline: "", primary_text: "", cta: "" },
+      { label: "Collateral mobility", theme_line: "Holdings that work as collateral, in minutes.", cards: [
+        { file: "capability_tile_03.png", on_tile: "Your holdings, no longer stuck.", support: "Tokenised units can move and be posted as collateral in minutes.", headline: "Let investors borrow against their fund units without redeeming.", primary_text: "Collateralised lending, built into the platform. Investors unlock liquidity while staying invested. New revenue for the fund. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_04.png", on_tile: "Collateral that moves at the speed you do.", support: "Mobilise fund holdings without the settlement lag.", headline: "Post fund holdings as collateral in minutes, not settlement cycles.", primary_text: "Tokenised units move and settle instantly, so collateral moves too. Give investors and counterparties the speed they expect. See it in a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
       ]},
-      { label: "Secondary transfer", theme_line: "", cards: [
-        { file: "capability_tile_05.png", on_tile: "Change hands, any day.", support: "Positions can transfer without waiting for a redemption window.", headline: "", primary_text: "", cta: "" },
-        { file: "capability_tile_06.png", on_tile: "A way out that doesn’t wait for quarter-end.", support: "Positions transfer between eligible holders, on-platform.", headline: "", primary_text: "", cta: "" },
+      { label: "Secondary transfer", theme_line: "Liquidity without waiting for the redemption window.", cards: [
+        { file: "capability_tile_05.png", on_tile: "Change hands, any day.", support: "Positions can transfer without waiting for a redemption window.", headline: "24/7 secondary liquidity for a private fund. Compliant, on-platform.", primary_text: "Positions transfer between eligible holders any day, not just at the window. Compliance rules run on every trade. Book a demo to see it.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_06.png", on_tile: "A way out that doesn’t wait for quarter-end.", support: "Positions transfer between eligible holders, on-platform.", headline: "Give investors an exit without touching the fund’s capital.", primary_text: "Redemptions drain the fund. Secondary transfers don’t. Let eligible investors trade positions between themselves, with a full audit trail.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
       ]},
-      { label: "Real-time transparency", theme_line: "", cards: [
-        { file: "capability_tile_07.png", on_tile: "Every position, visible in real time.", support: "One investor portal, live holdings, no quarter-end guesswork.", headline: "", primary_text: "", cta: "" },
-        { file: "capability_tile_08.png", on_tile: "The register that updates itself.", support: "Investors see their position the moment it changes.", headline: "", primary_text: "", cta: "" },
+      { label: "Real-time transparency", theme_line: "The register is the source of truth, live.", cards: [
+        { file: "capability_tile_07.png", on_tile: "Every position, visible in real time.", support: "One investor portal, live holdings, no quarter-end guesswork.", headline: "One investor portal: live holdings, statements and tax reports.", primary_text: "Your investors see holdings, statements and tax reports the moment they change, in your branded portal. Fewer calls, more trust. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_08.png", on_tile: "The register that updates itself.", support: "Investors see their position the moment it changes.", headline: "Retire the spreadsheet. The register updates itself, every trade.", primary_text: "Registry, cap table, distributions and corporate actions on one platform, updated as trades settle. 23% lower operating costs. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
       ]},
-      { label: "Automated compliance", theme_line: "", cards: [
-        { file: "capability_tile_09.png", on_tile: "Compliance that runs in the code.", support: "Whitelisting and transfer rules enforced automatically, every trade.", headline: "", primary_text: "", cta: "" },
-        { file: "capability_tile_10.png", on_tile: "Rules that can’t be skipped.", support: "Eligibility and restrictions built into the token itself.", headline: "", primary_text: "", cta: "" },
+      { label: "Automated compliance", theme_line: "Compliance you don’t have to remember.", cards: [
+        { file: "capability_tile_09.png", on_tile: "Compliance that runs in the code.", support: "Whitelisting and transfer rules enforced automatically, every trade.", headline: "Eligibility and transfer rules enforced on every trade, automatically.", primary_text: "Whitelisting, holder limits and transfer restrictions live in the token. Every trade checks itself. Built for AFSL and MAS frameworks. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_10.png", on_tile: "Rules that can’t be skipped.", support: "Eligibility and restrictions built into the token itself.", headline: "Locally compliant, programmed into the asset. Not bolted on.", primary_text: "Built for Australia’s digital asset laws, with compliance programmed into the protocol. Your licence, your rules, enforced every time. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
       ]},
-      { label: "Always-on", theme_line: "", cards: [
-        { file: "capability_tile_11.png", on_tile: "Your fund, open 24/7.", support: "No market hours, no cut-off times. The infrastructure never closes.", headline: "", primary_text: "", cta: "" },
-        { file: "capability_tile_12.png", on_tile: "Always on. Always settling.", support: "Round-the-clock infrastructure, not banker’s hours.", headline: "", primary_text: "", cta: "" },
+      { label: "Always-on", theme_line: "No market hours. No cut-offs. No waiting.", cards: [
+        { file: "capability_tile_11.png", on_tile: "Your fund, open 24/7.", support: "No market hours, no cut-off times. The infrastructure never closes.", headline: "Investors view, transfer and settle any hour, from any device.", primary_text: "No cut-off times, no waiting for Monday. Your fund runs on infrastructure that never closes, with compliance on every trade. Book a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "capability_tile_12.png", on_tile: "Always on. Always settling.", support: "Round-the-clock infrastructure, not banker’s hours.", headline: "Give your Australian fund a global edge: open when your investors are.", primary_text: "Investors in other time zones shouldn’t wait for Sydney to open. 24/7 settlement and liquidity, locally compliant. See it in a demo.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
       ]},
     ],
   },
@@ -144,7 +151,16 @@ const PACKS = [
 
 // ---------------------------------------------------------------------------
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const slot = (label, value, cls="") => `<div class="k">${label}</div><div class="v ${cls} ${value ? "" : "empty"}">${value ? esc(value) : "copy to come"}</div>`;
+const LIMITS = { HEADLINE: 70, "INTRO TEXT": 150, "THEME LINE": 60 };
+const slot = (label, value, cls="") => {
+  const lim = LIMITS[label];
+  const count = value && lim ? `<em class="n ${value.length > lim ? "over" : ""}">${value.length}/${lim}</em>` : "";
+  return `<div class="k">${label}</div><div class="v ${cls} ${value ? "" : "empty"}">${value ? esc(value) : "copy to come"}${count}</div>`;
+};
+const ctaSlot = c => {
+  const [btn, dest] = (c || "").split(" → ");
+  return `<div class="k">CTA</div><div class="v ${c ? "" : "empty"}">${c ? `<span class="btn">${esc(btn)}</span><em class="dest">${esc(dest || "")}</em>` : "copy to come"}</div>`;
+};
 
 function renderPack(p){
   const sections = p.sections.map(s => `
@@ -159,8 +175,8 @@ function renderPack(p){
         <div class="copy">
           <div class="k">ON TILE</div><div class="v ontile">${esc(c.on_tile)}<small>${esc(c.support)}</small></div>
           ${slot("HEADLINE", c.headline)}
-          ${slot("PRIMARY TEXT", c.primary_text)}
-          ${slot("CTA", c.cta)}
+          ${slot("INTRO TEXT", c.primary_text)}
+          ${ctaSlot(c.cta)}
         </div>
       </div>`;}).join("")}
     </div>`).join("");
