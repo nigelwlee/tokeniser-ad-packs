@@ -40,7 +40,7 @@ A = {
   }),
   "Variations": ("Be the case study they copy, not the one they cite.", {
     "06_next_kodak.png": (
-      "160+ funds and companies moved first. Here’s what it took them.",
+      "Equip your fund with the modern solution.",
       "The funds that tokenised early now offer T+0 settlement and 24/7 liquidity as standard. Find out what the move looks like for yours. Book a demo."),
     "07_case_study.png": (
       "Cut operating costs 23% and give investors liquidity. Same platform.",
