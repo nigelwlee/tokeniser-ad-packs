@@ -20,3 +20,8 @@ Static site, no build step. Deployed on Vercel from `main`.
 - `scripts/fill_copy.py` — writes `copy_data.py` into the `PACKS` array in `index.html`.
 - `scripts/check_copy.py` — validates limits (headline ≤70, intro ≤150, theme ≤60), empties and duplicate headlines.
 - Copy written with the `ad-creative`, `copywriting` and `ads` skills from [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) (MIT), installed under `.agents/skills/`.
+
+## Rules for review edits
+- **Changing text baked into an existing tile image** (on-tile headline, support line, kicker): set `on_tile` / `support` to the new wording **and** add `tile_fix: { field, from, to }` to that card in `PACKS`. The page shows an amber "IMAGE UPDATE NEEDED" badge on the tile and an "IMAGE FIX" row with old → new wording, so the designer can re-export the PNG. Remove `tile_fix` once the new image is in `tiles/` and `preview/` is regenerated.
+- **New concept with no image yet**: add the card with `placeholder: true`; the page renders a slate frame with the intended on-tile lines and an "IMAGE TO COME" tag.
+- **Headline / intro / CTA edits**: change `scripts/copy_data.py`, run `fill_copy.py` then `check_copy.py`, push.
