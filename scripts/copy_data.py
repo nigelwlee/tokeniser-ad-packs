@@ -43,8 +43,8 @@ A = {
       "Equip your fund with the modern solution.",
       "The funds that tokenised early now offer T+0 settlement and 24/7 liquidity as standard. Find out what the move looks like for yours. Book a demo."),
     "07_case_study.png": (
-      "Cut operating costs 23% and give investors liquidity. Same platform.",
-      "Tokenising on Tokeniser: 23% lower operating costs and 24/7 secondary liquidity. That’s the case study worth being in. Book a demo."),
+      "Tokenisation is the Kodak moment for finance. Be on the winning side of history.",
+      "Every industry gets one moment where the winners are decided. 160+ funds and companies have already made their move with Tokeniser. Make yours."),
     "08_chose_film.png": (
       "Your fund can tokenise at its own pace, under its own licence.",
       "Onboarding happens in stages, at your pace. No rip-and-replace, no new licence. Choose the future without betting the fund on it. Book a demo."),
