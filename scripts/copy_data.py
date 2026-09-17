@@ -10,7 +10,7 @@ A = {
   "The proof — they waited": ("Every industry has one. Finance’s is now.", {
     "02_kodak_moment.png": (
       "160+ funds and companies have already tokenised. Yours can too.",
-      "Every fund will tokenise eventually. The ones that move first set the terms for investors. See how Tokeniser gets you there, no tech project."),
+      "Tokenisation is inevitable. Global funds are moving fast with investor expectations moving faster. Tokeniser can get your fund ready."),
     "03_kodak_waiting.png": (
       "The technology is proven. The only variable left is when you move.",
       "A$2B+ has already transacted on Tokeniser. T+0 settlement, 24/7 liquidity, locally compliant. The question isn’t if. It’s when. Book a demo."),
