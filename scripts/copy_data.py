@@ -16,7 +16,7 @@ A = {
       "Tokenisation is inevitable. Global funds are moving fast with investor expectations moving faster. Tokeniser can get your fund ready."),
     "03_kodak_waiting.png": (
       "The technology is proven. The only variable left is when you move.",
-      "A$2B+ has already transacted on Tokeniser. T+0 settlement, 24/7 liquidity, locally compliant. The question isn’t if. It’s when. Book a demo."),
+      "Tokeniser is proven and ready: 160+ funds and companies, A$2B+ transacted, T+0 settlement, 24/7 liquidity, locally compliant. It’s your move."),
     "04_blackberry_waiting.png": (
       "Your investors are moving to funds that settle in minutes, not days.",
       "The fund next door already offers T+0 settlement and 24/7 liquidity. Standing still is a decision too. See what tokenising yours involves."),
