@@ -34,6 +34,9 @@ A = {
     "12_airbnb_replaced.png": (
       "Reach investors beyond your channels, without leaving your stack.",
       "Airbnb won on access. Tokenisation gives your fund the same edge: a global investor base, local compliance, T+0 settlement. See it in a demo."),
+    "12b_airbnb_new_offering.png": (
+      "Give investors a new way in: tokenised units, 24/7 liquidity, T+0.",
+      "Airbnb didn’t take rooms from hotels. It offered what they couldn’t. Tokenisation does the same for your fund: new investors, new liquidity."),
   }),
   "Variations": ("Be the case study they copy, not the one they cite.", {
     "06_next_kodak.png": (
