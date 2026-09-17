@@ -50,7 +50,7 @@ A = {
       "Onboarding happens in stages, at your pace. No rip-and-replace, no new licence. Choose the future without betting the fund on it. Book a demo."),
     "09_first_movers.png": (
       "Tokenisation takes your fund to the frontier.",
-      "The rules are being written now: T+0 settlement, 24/7 liquidity, global investors, local compliance. 160+ funds and companies are already there. Join them."),
+      "The rules are being written now: T+0 settlement, 24/7 liquidity, global investors, local compliance. 160+ funds and companies are there. Join them."),
     "10_dont_develop.png": (
       "See what tokenising your fund actually involves.",
       "One platform from issuance to settlement. Your team keeps familiar registry operations. A$2B+ transacted already. Book a demo and see it live."),
