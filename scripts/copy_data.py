@@ -6,6 +6,9 @@ A = {
     "01_investors_ryoji.png": (
       "Give your investors 24/7 liquidity before someone else does.",
       "Investors now expect 24/7 liquidity and T+0 settlement. 160+ funds and companies already offer it on Tokeniser. See what it takes for yours."),
+    "01b_get_ahead.png": (
+      "Offer 24/7 liquidity and T+0 settlement before they ask for it.",
+      "Investor expectations are moving fast. Funds on Tokeniser already offer 24/7 liquidity and T+0 settlement. Get yours ahead of the curve."),
   }),
   "The proof — they waited": ("Every industry has one. Finance’s is now.", {
     "02_kodak_moment.png": (

@@ -39,6 +39,14 @@
   .cell{display:flex;flex-direction:column;gap:12px;max-width:560px}
   .card{width:100%;border-radius:3px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.22);background:#1b1f26;aspect-ratio:1/1}
   .card img{display:block;width:100%;height:auto}
+  .card.ph{position:relative;background:linear-gradient(160deg,#3a3f4a,#1b1f26);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:9% 8%;border:1px dashed rgba(255,255,255,.35)}
+  .ph-bar{width:11%;height:10px;background:var(--mint);margin-bottom:6%}
+  .ph-h{font-weight:600;font-size:clamp(30px,9.5cqw,64px);line-height:1.12;letter-spacing:-0.01em;max-width:90%}
+  .ph-foot{position:absolute;left:8%;right:8%;bottom:8%;display:flex;justify-content:space-between;align-items:baseline;font-size:14px}
+  .ph-foot .wm{font-weight:600;font-size:17px;color:var(--mint)}
+  .ph-foot .wm i{font-style:normal;display:inline-block;width:.85em;height:.85em;border:2px solid var(--mint);border-radius:50%;vertical-align:-0.05em;margin:0 1px}
+  .ph-tag{position:absolute;top:14px;right:14px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#0a0a0a;background:var(--mint);padding:4px 8px;border-radius:2px}
+  .card{container-type:inline-size}
   .meta{display:flex;justify-content:space-between;align-items:center;padding:0 2px}
   .meta span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5a564c;letter-spacing:0.03em}
   .meta a{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:1px}
@@ -93,6 +101,7 @@ const PACKS = [
     sections: [
       { label: "The thesis", theme_line: "The risk was never the technology. It was the delay.", cards: [
         { file: "01_investors_ryoji.png", on_tile: "Your investors won’t wait for you to be ready.", support: "The window is open. Move first.", headline: "Give your investors 24/7 liquidity before someone else does.", primary_text: "Investors now expect 24/7 liquidity and T+0 settlement. 160+ funds and companies already offer it on Tokeniser. See what it takes for yours.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "01b_get_ahead.png", on_tile: "Get ahead of your investors.", support: "Be ready before they ask.", headline: "Offer 24/7 liquidity and T+0 settlement before they ask for it.", primary_text: "Investor expectations are moving fast. Funds on Tokeniser already offer 24/7 liquidity and T+0 settlement. Get yours ahead of the curve.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", placeholder: true },
       ]},
       { label: "The proof — they waited", theme_line: "Every industry has one. Finance’s is now.", cards: [
         { file: "02_kodak_moment.png", on_tile: "Every industry has its Kodak moment.", support: "Tokenisation for finance is here. (tile still shows: This is finance’s. Tokenisation is here.)", headline: "160+ funds and companies have already tokenised. Yours can too.", primary_text: "Tokenisation is inevitable. Global funds are moving fast with investor expectations moving faster. Tokeniser can get your fund ready.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
@@ -170,8 +179,10 @@ function renderPack(p){
       const base = c.file.replace(/\.png$/, "");
       return `
       <div class="cell">
-        <div class="card"><img src="preview/${p.dir}/${base}.webp" alt="${esc(c.on_tile)}" loading="lazy" width="1080" height="1080"></div>
-        <div class="meta"><span>${esc(c.file)}</span><a href="tiles/${p.dir}/${c.file}" download="${esc(c.file)}">download &darr;</a></div>
+        ${c.placeholder
+          ? `<div class="card ph"><div class="ph-bar"></div><div class="ph-h">${esc(c.on_tile)}</div><div class="ph-foot"><span>${esc(c.support)}</span><span class="wm">t<i>o</i>keniser</span></div><div class="ph-tag">IMAGE TO COME</div></div>`
+          : `<div class="card"><img src="preview/${p.dir}/${base}.webp" alt="${esc(c.on_tile)}" loading="lazy" width="1080" height="1080"></div>`}
+        <div class="meta"><span>${esc(c.file)}</span>${c.placeholder ? `<span>placeholder</span>` : `<a href="tiles/${p.dir}/${c.file}" download="${esc(c.file)}">download &darr;</a>`}</div>
         <div class="copy">
           <div class="k">ON TILE</div><div class="v ontile">${esc(c.on_tile)}<small>${esc(c.support)}</small></div>
           ${slot("HEADLINE", c.headline)}
