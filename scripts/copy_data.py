@@ -20,6 +20,9 @@ A = {
     "04_blackberry_waiting.png": (
       "Your investors are moving to funds that settle in minutes, not days.",
       "The fund next door already offers T+0 settlement and 24/7 liquidity. Standing still is a decision too. See what tokenising yours involves."),
+    "04b_blackberry_chose.png": (
+      "Waiting is a choice too. Make the other one while the window is open.",
+      "Waiting felt safe right up until it wasn’t. Tokeniser is proven and ready: 160+ funds and companies, A$2B+ transacted. It’s your move."),
     "05_blackberry_stood.png": (
       "Tokenise without a tech project. Keep your registry, add the edge.",
       "You don’t need to rebuild anything. Tokeniser runs alongside your existing infrastructure, under your existing licence. Book a demo."),
