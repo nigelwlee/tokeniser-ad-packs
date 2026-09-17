@@ -60,6 +60,14 @@
   .n.over{color:#b3261e;font-weight:500}
   .copy .btn{display:inline-block;font-size:12px;font-weight:600;padding:5px 12px;border:1.5px solid var(--ink);border-radius:20px;background:var(--mint)}
   .copy .dest{display:block;font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:10px;color:#8f8a7c;margin-top:6px;word-break:break-all}
+  .card{position:relative}
+  .fix-badge{position:absolute;top:14px;left:14px;z-index:1;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.1em;color:#0a0a0a;background:#ffd166;padding:6px 10px;border-radius:2px;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+  .copy .k.fix{color:#7a5a00;font-weight:500}
+  .copy .fix-box{background:#fff3cf;border-left:3px solid #ffd166;padding:10px 12px;border-radius:2px}
+  .copy .fix-box b{display:block;font-size:13px;margin-bottom:6px}
+  .copy .fix-box .from{display:block;color:#8f8a7c;text-decoration:line-through;font-size:13px}
+  .copy .fix-box .to{display:block;font-weight:600;font-size:14px;margin-top:2px}
+  .copy .fix-box .to::before{content:"→ ";color:#7a5a00}
   .spec{max-width:1180px;margin:18px auto 0;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.7;color:var(--muted)}
   .spec b{color:var(--ink);font-weight:500}
 
@@ -104,7 +112,7 @@ const PACKS = [
         { file: "01b_get_ahead.png", on_tile: "Get ahead of your investors.", support: "Be ready before they ask.", headline: "Offer 24/7 liquidity and T+0 settlement before they ask for it.", primary_text: "Investor expectations are moving fast. Funds on Tokeniser already offer 24/7 liquidity and T+0 settlement. Get yours ahead of the curve.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", placeholder: true },
       ]},
       { label: "The proof — they waited", theme_line: "Every industry has one. Finance’s is now.", cards: [
-        { file: "02_kodak_moment.png", on_tile: "Every industry has its Kodak moment.", support: "Tokenisation for finance is here. (tile still shows: This is finance’s. Tokenisation is here.)", headline: "160+ funds and companies have already tokenised. Yours can too.", primary_text: "Tokenisation is inevitable. Global funds are moving fast with investor expectations moving faster. Tokeniser can get your fund ready.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
+        { file: "02_kodak_moment.png", on_tile: "Every industry has its Kodak moment.", support: "Tokenisation for finance is here.", headline: "160+ funds and companies have already tokenised. Yours can too.", primary_text: "Tokenisation is inevitable. Global funds are moving fast with investor expectations moving faster. Tokeniser can get your fund ready.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", tile_fix: { field: "support line", from: "This is finance’s. Tokenisation is here.", to: "Tokenisation for finance is here." } },
         { file: "03_kodak_waiting.png", on_tile: "Film didn’t kill Kodak. Waiting did.", support: "1975 · Kodak invented digital / Don’t develop a Kodak moment.", headline: "The technology is proven. The only variable left is when you move.", primary_text: "Tokeniser is proven and ready: 160+ funds and companies, A$2B+ transacted, T+0 settlement, 24/7 liquidity, locally compliant. It’s your move.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
         { file: "04_blackberry_waiting.png", on_tile: "Keyboards didn’t kill BlackBerry. Waiting did.", support: "2007 · The iPhone arrived / The industry moved. It stood still.", headline: "Your investors are moving to funds that settle in minutes, not days.", primary_text: "The fund next door already offers T+0 settlement and 24/7 liquidity. See what tokenising yours involves.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo" },
         { file: "04b_blackberry_chose.png", on_tile: "BlackBerry chose to wait.", support: "We know what happened next.", headline: "Waiting is a choice too. Make the other one while the window is open.", primary_text: "Waiting felt safe right up until it wasn’t. Tokeniser is proven and ready: 160+ funds and companies, A$2B+ transacted. It’s your move.", cta: "Request demo → info-redbelly.zohobookings.com.au/demo", placeholder: true },
@@ -183,10 +191,11 @@ function renderPack(p){
       <div class="cell">
         ${c.placeholder
           ? `<div class="card ph"><div class="ph-bar"></div><div class="ph-h">${esc(c.on_tile)}</div><div class="ph-foot"><span>${esc(c.support)}</span><span class="wm">t<i>o</i>keniser</span></div><div class="ph-tag">IMAGE TO COME</div></div>`
-          : `<div class="card"><img src="preview/${p.dir}/${base}.webp" alt="${esc(c.on_tile)}" loading="lazy" width="1080" height="1080"></div>`}
+          : `<div class="card">${c.tile_fix ? `<div class="fix-badge">IMAGE UPDATE NEEDED</div>` : ""}<img src="preview/${p.dir}/${base}.webp" alt="${esc(c.on_tile)}" loading="lazy" width="1080" height="1080"></div>`}
         <div class="meta"><span>${esc(c.file)}</span>${c.placeholder ? `<span>placeholder</span>` : `<a href="tiles/${p.dir}/${c.file}" download="${esc(c.file)}">download &darr;</a>`}</div>
         <div class="copy">
           <div class="k">ON TILE</div><div class="v ontile">${esc(c.on_tile)}<small>${esc(c.support)}</small></div>
+          ${c.tile_fix ? `<div class="k fix">IMAGE FIX</div><div class="v fix-box"><b>Change the ${esc(c.tile_fix.field)} on the tile</b><span class="from">${esc(c.tile_fix.from)}</span><span class="to">${esc(c.tile_fix.to)}</span></div>` : ""}
           ${slot("HEADLINE", c.headline)}
           ${slot("INTRO TEXT", c.primary_text)}
           ${ctaSlot(c.cta)}
