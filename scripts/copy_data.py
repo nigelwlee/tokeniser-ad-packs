@@ -61,7 +61,7 @@ B = {
   "Instant settlement": ("Settle the moment the trade is struck.", {
     "capability_tile_01.png": (
       "T+0 settlement for your fund, on infrastructure 160+ already use.",
-      "Two days of settlement risk, gone. Tokenised units settle atomically, the moment a trade is struck. See T+0 on your asset class. Book a demo."),
+      "Two days of settlement risk, gone. Tokenised units settle instantly, the moment a trade is struck. See T+0 on your asset class. Book a demo."),
     "capability_tile_02.png": (
       "Free two days of capital on every trade. Investors notice.",
       "Every T+2 trade parks investor capital for two days. On Tokeniser it works from minute one. A$2B+ transacted this way. Request a demo."),
@@ -93,10 +93,10 @@ B = {
   "Automated compliance": ("Compliance you don’t have to remember.", {
     "capability_tile_09.png": (
       "Eligibility and transfer rules enforced on every trade, automatically.",
-      "Whitelisting, holder limits and transfer restrictions live in the token. Every trade checks itself. Built for AFSL and MAS frameworks. Book a demo."),
+      "Whitelisting, holder limits and transfer restrictions are built into every asset. Every trade checks itself. Built for AFSL and MAS. Book a demo."),
     "capability_tile_10.png": (
       "Locally compliant, programmed into the asset. Not bolted on.",
-      "Built for Australia’s digital asset laws, with compliance programmed into the protocol. Your licence, your rules, enforced every time. Book a demo."),
+      "Built for Australian financial regulation, with eligibility checked on every asset and transaction. Your licence, your rules, every time. Book a demo."),
   }),
   "Always-on": ("No market hours. No cut-offs. No waiting.", {
     "capability_tile_11.png": (

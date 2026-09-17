@@ -28,3 +28,4 @@ Static site, no build step. Deployed on Vercel from `main`.
 
 ## Ad layout guide
 Lives on the site (collapsible section under the copy spec). Four elements, one left-aligned column, 8% safe margin: (1) short mint accent bar, (2) headline in sentence case with the closing phrase in mint, ≤8 words, (3) support line ≤6 words, (4) footer row with the sign-off left and the tokeniser wordmark right on one baseline. Nothing else on the tile. Pack A already follows it; every Pack B tile carries a `tile_fix` with a punchy support line and `layout: true`.
+- **No blockchain or crypto concepts in any copy** (token as a noun, protocol, atomic, chain, ledger, smart contract, wallet, custody, digital asset, web3…). Tokenise/tokenisation is fine. `scripts/check_copy.py` fails on any hit.
